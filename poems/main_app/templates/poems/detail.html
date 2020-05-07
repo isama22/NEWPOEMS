@@ -5,28 +5,38 @@
 <div>
   <span><em>{{ poem.title }}</em></span>
   <p>By: {{request.user.username}}</p>
-  <div>
-    <p>{{ poem.poem }}</p>
+  <div class="responsive-img">
+
+
+    {% for photo in poem.photo_set.all %}
+
+      <div class="text">
+         <p class="poem">{{ poem.poem }}</p>
+      </div>
+     
+      <div class="image">
+        <img src="{{photo.url}}">
+      </div>
+
+
+
+    {% empty %}
+    <p>No Photos Uploaded</p>
+    {% endfor %}
+
   </div>
 </div>
-<a href="{% url 'poes_update' poem.id %}">Edit</a>
-<a href="{% url 'poes_delete' poem.id %}">Delete</a>
-<!-- if a photo exists, show it with a for loop and disable form, if it doesnt exist show form  -->
-
-{% for photo in poem.photo_set.all %}
-    <img class="responsive-img card-panel" src="{{photo.url}}">
-{% empty %}
-    <p>No Photos Uploaded</p>
-{% endfor %}
 
 <form action="{% url 'add_photo' poem.id %}" enctype="multipart/form-data" method="POST">
-    {% csrf_token %}
-    <input type="file" name="photo-file">
-    <br><br>
-    <input type="submit" value="Upload Photo">
+  {% csrf_token %}
+  <input type="file" name="photo-file">
+  <br><br>
+  <input type="submit" value="Upload Photo">
 </form>
 <br><br>
-
+<a href="{% url 'poes_update' poem.id %}">Edit</a>
+<a href="{% url 'poes_delete' poem.id %}">Delete</a>
+<br><br>
 <div>
   <table>
     <thead>

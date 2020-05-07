@@ -8,3 +8,38 @@ a{
 .navStyle{
     color: black;
 }
+
+.poem {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* background-image: url(https://i.imgur.com/u1AeckX.png); */
+    color: red;
+}
+
+.responsive-img {
+    /* text-align: center; */
+    z-index: -1;
+}
+
+.text {
+    position: absolute;
+    /* display: inline; */
+    /* max-width: 250px; */
+}
+
+.poem {
+    max-width: 250px;
+    overflow-wrap: break-word;
+    padding-left: 450px;
+    padding-top: 150px;
+}
+
+.image {
+
+}
+
+.poemImage {
+    position: relative;
+    text-align: center;
+}
