@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-<a href="{% url 'login' %}">Log In</a>
+
+<p class="flexSignUp">
+<a class="homeLinks" href="{% url 'login' %}">Log In</a>
 or   
-<a href="{% url 'signup' %}">Sign Up</a>
+<a class="homeLinks" href="{% url 'signup' %}">Sign Up</a>
 to share and view poems 
+</p>
 
 {% endblock %}
