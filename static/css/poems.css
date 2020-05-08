@@ -49,6 +49,13 @@ a{
     flex-direction: row;
 }
 
+.genres{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-style: .5px solid gray;
+}
+
 .Comments{
     width: 500px;
 }
@@ -62,11 +69,13 @@ a{
     max-width: 250px;
     overflow-wrap: break-word;
     padding-left: 450px;
-    padding-top: 150px;
+    padding-top: 150px;}
+
+
+
+.titleBox{
+    height: 100px;
 }
-
-
-
 .poemImage {
     position: relative;
     text-align: center;
@@ -112,6 +121,11 @@ a{
     margin-bottom: 5px;
 }
 
+
+.card{
+    display: flex;
+    flex-direction: row;
+}
 .navBarLinks{
     display: flex;
     flex-direction: row;

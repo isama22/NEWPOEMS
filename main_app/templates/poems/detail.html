@@ -4,12 +4,12 @@
 
 <div class="detailPageFlex">
 <div class="detailPage">
-    <div>
+    <div class="titleBox">
       <span><p class="editPageTitle">{{ poem.title }}</p></span>
     <p>By: {{request.user.username}}</p>
   </div>
   <div class="responsive-img">
-    
+
     {% for photo in poem.photo_set.all %}
 
       <div class="text">
