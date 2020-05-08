@@ -120,7 +120,7 @@ USE_TZ = True
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-
+print (BASE_DIR, 'BASE_DIR')
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/poems/'
