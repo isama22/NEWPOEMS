@@ -17,4 +17,4 @@ With features that let you tag and view works by genre, generate prompts, find n
 
 <strong>Deployed App:</strong> https://newpoems.herokuapp.com/
 
-<strong>Next Steps:</strong> We'd like to allow users to download their poem once it's been made, save poems by others with likes, tag a poem with a genre, be able to see poems collected by the their genre tag, visit a page that generates random poem prompts, and a page that pulls a random published poem for inspiration.
+<strong>Next Steps:</strong> We'd like to allow users to see a poems image on the index page before going to it's details page, download their poem once it's been made, save poems by others with likes, tag a poem with a genre, be able to see poems collected by the their genre tag, visit a page that generates random poem prompts, and a page that pulls a random published poem for inspiration.
