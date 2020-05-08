@@ -1,43 +1,35 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html class="doc" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Poe</title>
   <link rel="stylesheet" href="{% static 'css/poems.css' %}">
-
-  <style>
-    body {
-      background-color: lightgrey;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
   
 </head>
 <body>
   <header>
-   <nav>
-      <div>
-        <ul>
-          <li><a href="/">Poe</a></li>
-          <ul>
+      <div class="navBarFlex">
+        <img class="titleIMG" src="https://i.imgur.com/WBROb2v.png">
             <!-- changes below -->
-            <li><a href="{% url 'about' %}">About</a></li>
+          <div class="navBarLinks">
+            <a class="linkText" href="{% url 'about' %}">About</a>
             {% if user.is_authenticated %}
-              <li><a href="{% url 'poes_create' %}">Make A Post</a></li>
-              <li><a href="{% url 'index' %}">Poes</a></li>
-              <li><a href="{% url 'genres' %}">Genres</a></li>
+            <a class="linkText" href="{% url 'poes_create' %}">Make A Post</a>
+            <a class="linkText" href="{% url 'index' %}">Poes</a>
+            <a class="linkText" href="{% url 'genres' %}">Genres</a>
               <!-- <li>(random poem inspo generator)</li> -->
-              <li><a href="{% url 'logout' %}">Log Out</a></li>
+            <a class="linkText" href="{% url 'logout' %}">Log Out</a>
             {% else %}
             <!-- <li><a href="{% url 'about' %}">Log In</a></li> -->
-            <li><a href="{% url 'signup' %}">Sign Up</a></li>
-            <li><a href="{% url 'login' %}">Log In</a></li>
+            <a class="linkText" href="{% url 'signup' %}">Sign Up</a>
+            <a class="linkText" href="{% url 'login' %}">Log In</a>
             {% endif %}
-          </ul>
+          </div>
       </div>
-    </nav>
   </header>
   <main>
     {% block content %}
