@@ -3,7 +3,7 @@ Poe is a poem editing app that enables our users to post, view, comment, and col
 
 With features that let you tag and view works by genre, generate prompts, find new writers and inspo with a page that pulls random poems by published authors.
 
-<em>Technologies used: </em>Django, Python, HTML, Bootstrap, and Heroku
+<em>Technologies used: </em>Django, Python, HTML, CSS, AWS Image Hosting
 
 <strong>ERD:</strong>![](https://i.postimg.cc/BnYbKSRL/Screen-Shot-2020-04-30-at-5-23-25-PM.png)
 
@@ -17,4 +17,4 @@ With features that let you tag and view works by genre, generate prompts, find n
 
 <strong>Deployed App:</strong> https://newpoems.herokuapp.com/
 
-<strong>Next Steps:</strong>
+<strong>Next Steps:</strong> We'd like to allow users to download their poem once it's been made, save poems by others with likes, tag a poem with a genre, be able to see poems collected by the their genre tag, visit a page that generates random poem prompts, and a page that pulls a random published poem for inspiration.
