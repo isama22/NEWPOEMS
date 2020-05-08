@@ -33,6 +33,25 @@ a{
     z-index: -1;
 }
 
+.uploadButton{
+    color: transparent;
+    width: 87px;
+}
+
+.detailPageFlex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttonLayout{
+    display: flex;
+    flex-direction: row;
+}
+
+.Comments{
+    width: 500px;
+}
 .text {
     position: absolute;
     /* display: inline; */
@@ -139,6 +158,15 @@ main{
     border-bottom: solid;
     border-color: gray;
     width: 100px;
+}
+
+.editPageTitle{
+    text-transform: capitalize;
+}
+
+.detailPage{
+    display: flex;
+
 }
 
 #id_title{
