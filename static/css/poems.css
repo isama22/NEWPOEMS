@@ -127,3 +127,26 @@ main{
     font-size: 20px;
 }
 
+.poemCreationForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding-left: 50px;
+}
+
+.poemPage{
+    border-bottom: solid;
+    border-color: gray;
+    width: 100px;
+}
+
+#id_title{
+width: 150px;
+height: 20px;
+}
+
+.postButton{
+    margin-top: 20px;
+    margin-left: 40px;
+}
