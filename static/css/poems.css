@@ -10,22 +10,18 @@ a{
 }
 
 .poem {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    /* background-image: url(https://i.imgur.com/u1AeckX.png); */
+
     color: white;
 }
 
 .responsive-img {
-    /* text-align: center; */
+
     z-index: -1;
 }
 
 .text {
     position: absolute;
-    /* display: inline; */
-    /* max-width: 250px; */
+
 }
 
 .poem {
