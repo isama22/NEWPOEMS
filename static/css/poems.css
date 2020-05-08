@@ -1,3 +1,12 @@
+.titleIMG{
+    height: 90px;
+    width: 150px;
+}
+
+body{
+    background-color: rgba(200,200,150,.75);
+}
+
 nav{
     color: black;
 }
@@ -40,4 +49,17 @@ a{
 .poemImage {
     position: relative;
     text-align: center;
+}
+
+.navBarFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navBarLinks{
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+    margin-top: 25px;
 }
