@@ -5,11 +5,9 @@ from django.contrib.auth.models import User
 
 class Poem(models.Model):
   title = models.CharField(max_length=100)
-  author = models.CharField(max_length=100)
+  # author = models.CharField(max_length=100)
   poem = models.TextField(max_length=10000)
-#   genre = models.Field(dont know the model for genre)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
-  # date = models.DateField('Posted Date')
 
   def __str__(self):
     return self.title
@@ -21,7 +19,6 @@ class Meta:
   ordering = ['-date']
 
 class Comment(models.Model):
-  # poem = models.TextField(max_length=200)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
   poem = models.ForeignKey(Poem, on_delete=models.CASCADE)
   text = models.TextField(max_length=10000)

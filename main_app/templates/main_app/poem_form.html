@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
+
 {% if object %}
 <h4>Edit <span><em>{{ object.title }}</em></span></h4>
 <a href="{% url 'detail' poem.id %}">Back</a>
 {% else %}
 <h4>Make A Post</h4>
 {% endif %}
+
 <form action="" method="post">
     {%csrf_token %}
     <table>

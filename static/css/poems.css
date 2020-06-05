@@ -160,6 +160,10 @@ main{
     height: 100vh;
     overflow: auto;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
 
 .flexSignUp{
@@ -173,11 +177,6 @@ main{
     padding-left: 5px;
     padding-right: 5px;
     font-size: 20px;
-}
-main{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
 }
 
 .poemCreationForm{
@@ -198,10 +197,11 @@ main{
     text-transform: capitalize;
 }
 
-.detailPage{
+/* .detailPage{
     display: flex;
+    z-index: auto;
 
-}
+} */
 
 #id_title{
 width: 150px;
@@ -211,4 +211,13 @@ height: 20px;
 .postButton{
     margin-top: 20px;
     margin-left: 40px;
+}
+.detailPageFlex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detailPage{
+    display: flex;
 }

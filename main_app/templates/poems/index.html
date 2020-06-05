@@ -1,16 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
-{% load static %}
 {% for poem in poems %}
-
+{% load static %}
 
 <div class="card">
     <div class="card-content">
-        <a class="cardTitle" href="/poems/{{ poem.id }}">
-        <span >{{ poem.title }}</span></a>
+        <a href="/poems/{{ poem.id }}">
+        <span class="card-title">{{ poem.title }}</span></a>
         <p>By: {{request.user.username}}</p>
     </div>
 </div>
-
 {% endfor %}
 {% endblock %}

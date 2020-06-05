@@ -1,51 +1,45 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-
-<div>
-  <span><em>{{ poem.title }}</em></span>
-  <p>By: {{request.user.username}}</p>
-  <div class="responsive-img">
-
-
+<div class="detailPageFlex">
+<div class="detailPage">
+    <div class="titleBox">
+      <span><p class="editPageTitle">{{ poem.title }}</p></span>
+    <p>By: {{request.user.username}}</p>
+  </div>
+  <div class="responsive-img">  </div>
     {% for photo in poem.photo_set.all %}
-
       <div class="text">
          <p class="poem">{{ poem.poem }}</p>
       </div>
-     
       <div class="image">
         <img src="{{photo.url}}">
       </div>
-
-
-
     {% empty %}
     <p>No Photos Uploaded</p>
     {% endfor %}
 
-  </div>
 </div>
-
-<form action="{% url 'add_photo' poem.id %}" enctype="multipart/form-data" method="POST">
+<form class="buttonLayout" action="{% url 'add_photo' poem.id %}" enctype="multipart/form-data" method="POST">
   {% csrf_token %}
-  <input type="file" name="photo-file">
-  <br><br>
+  <input class="uploadButton" type="file" name="photo-file">
   <input type="submit" value="Upload Photo">
 </form>
 <br><br>
 <a href="{% url 'poes_update' poem.id %}">Edit</a>
 <a href="{% url 'poes_delete' poem.id %}">Delete</a>
-<br><br>
+<br>
+<br>
 <div>
-  <table>
+  <table class="Comments">
     <thead>
       <tr>Comments:</tr>
     </thead>
-    <tbody>
+    <tbody >
       {% for comment in poem.comment_set.all %}
       <tr>
-        <td><em>{{request.user.username}}:</em> {{comment.text}}</td>
+        <td >{{request.user.username}}: <br>
+          {{comment.text}}</td>
       </tr>
       {% empty %}
       <p>No comments yet!</p>
@@ -57,5 +51,6 @@
     {{ comment_form.as_p }}
     <input type="submit" class="btn" value="Add Comment">
   </form>
+</div>
 </div>
 {% endblock %}
